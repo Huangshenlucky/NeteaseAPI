@@ -66,7 +66,7 @@
         function main() {
             //检测文件为空
             if (!document.querySelector('input[type="file"]').files[0]) {
-                alert("上传文件为空")
+                alert("上传文件为空!")
                 return
             }
             //获取文件格式
@@ -96,7 +96,7 @@
             formData.append('songFile', file)
             axios({
                 method: 'post',
-                url: `http://localhost:3000/cloud?time=${Date.now()}&cookie=${cookieToken}`,
+                url: `/cloud?time=${Date.now()}&cookie=${cookieToken}`,
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
