@@ -57,8 +57,8 @@
                 // withCredentials: true, //关键
             })
             cookieToken = res.data.cookie
-                // localStorage.setItem('cookie', cookieToken);
-                // localStorage.setItem('fuck', cookieToken)
+            localStorage.setItem('cookie', cookieToken);
+            // localStorage.setItem('fuck', cookieToken)
             console.log(cookieToken)
             alert("登录成功")
         }
@@ -89,32 +89,6 @@
                 currentIndx += 1
                 upload(item, currentIndx)
             }
-            // document
-            //     .querySelector('input[type="file"]')
-            //     .addEventListener('change', function (e) {
-            //         console.log(this.files)
-            //         let currentIndx = 0
-            //         fileLength = this.files.length
-            //         console.log("fileLength:" + fileLength)
-            //         let musicFormatCheck = "mp3"
-            //         if (document.getElementById("mp3").checked) {
-            //             musicFormatCheck = "mp3"
-            //         }
-            //         if (document.getElementById("flac").checked) {
-            //             musicFormatCheck = "flac"
-            //         }
-            //         for (const item of this.files) {
-            //             Object.defineProperty(item, 'name', {
-            //                 writable: true, //设置属性为可写
-            //             })
-            //             item.name = "song." + musicFormatCheck
-            //             console.log(item.name);
-            //             var formData = new FormData()
-            //             formData.append('songFile', item)
-            //             currentIndx += 1
-            //             upload(item, currentIndx)
-            //         }
-            //     })
         }
 
         function upload(file, currentIndx) {
